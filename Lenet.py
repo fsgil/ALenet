@@ -43,28 +43,19 @@ model.add( Activation( activation = 'relu') )
 # pooling layer four
 model.add( MaxPooling2D(pool_size=(2,2) , strides=(2,2) ) )
 
-# layer five
-model.add( Convolution2D( filters=20, kernel_size=(5,5), padding='same', input_shape=(32,32,3)) )
-
-# activation function for layer five
-model.add( Activation( activation = 'relu') )
-
-# pooling layer six
-model.add( MaxPooling2D(pool_size=(2,2) , strides=(2,2) ) )
-
 # Flatten the network
 model.add( Flatten() )
 
-# fully connected layer 7
+# fully connected layer 5
 model.add( Dense(500) )
 
-# activation layer for layer 7
+# activation layer for layer 5
 model.add( Activation( activation = "relu") )
 
-# fully conneceted layer 8
+# fully conneceted layer 6
 model.add( Dense(10) )
 
-# Activation function of layer 8
+# Activation function of layer 6
 model.add( Activation("softmax") )
 
 ###############################################################################
