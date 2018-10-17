@@ -75,7 +75,7 @@ model.add( Activation("softmax") )
 model.compile( loss = "categorical_crossentropy",  optimizer = SGD(lr = 0.001, momentum=0.9), metrics = ["accuracy"] )
 
 # Train the model 
-model.fit( x_train, y_train, batch_size = 128, nb_epoch = 25, verbose = 1 )
+model.fit( x_train, y_train, batch_size = 128, epochs = 25, verbose = 1 )
 
 # Evaluate the model
 (loss, accuracy) = model.evaluate( x_test, y_test, batch_size = 128, verbose = 1 )
